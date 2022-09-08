@@ -11,10 +11,10 @@ namespace Trivia.Scene.Pack.PackScene
         private void Awake()
         {
             _backButton.onClick.RemoveAllListeners();
-            _backButton.onClick.AddListener(OpenHome);
+            _backButton.onClick.AddListener(GoBack);
         }
 
-        private void OpenHome()
+        private void GoBack()
         {
             Debug.Log("Load to Home Scene!");
             SceneManager.LoadScene("Home");
