@@ -12,7 +12,7 @@ namespace Trivia.Scene.Pack.PackScene
         void Update()
         {
             // TODO: Get data from Currency 
-            _goldText.text = "Gold: " + gold.ToString(); // temp
+            // _goldText.text = "Gold: " + gold.ToString(); // temp
         }
     }
 }
