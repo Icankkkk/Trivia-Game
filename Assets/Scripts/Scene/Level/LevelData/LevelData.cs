@@ -24,7 +24,7 @@ namespace Trivia.Scene.Level.LevelData
             for (int i = 0; i < 5; i++)
             {
                 GameObject levelButton = Instantiate(_levelButtonPrefabs, new Vector3(0, 0, 0), Quaternion.identity, _levelButtonContainer);
-                TextMeshProUGUI buttonText = levelButton.GetComponent<TextMeshProUGUI>();
+                TextMeshProUGUI buttonText = levelButton.GetComponentInChildren<TextMeshProUGUI>();
 
                 Database database = FindObjectOfType<Database>();
 
@@ -37,7 +37,6 @@ namespace Trivia.Scene.Level.LevelData
                 Button createLevelButton = levelButton.GetComponent<Button>();
 
                 _levelButtonList.Add(createLevelButton);
-                createLevelButton.onClick.RemoveAllListeners();
                 createLevelButton.onClick.AddListener(delegate
                 {
                     OnClickedLevel(questionNumber);
