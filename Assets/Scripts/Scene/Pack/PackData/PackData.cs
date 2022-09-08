@@ -38,9 +38,6 @@ namespace Trivia.Scene.Pack.PackData
                 Button createdPackButton = packButton.GetComponent<Button>();
                 _packButtonList.Add(createdPackButton);
 
-                /* createdPackButton.onClick.AddListener(() 
-                     => OnClickPack(name, price));*/
-
                 createdPackButton.onClick.RemoveAllListeners();
                 createdPackButton.onClick.AddListener(delegate
                 {
@@ -54,15 +51,12 @@ namespace Trivia.Scene.Pack.PackData
             Database database = FindObjectOfType<Database>();
             database.SetPack(name);
 
-            Debug.Log(price.ToString());
-
             database.LoadQuiz(name);
             LevelScene();
         }
 
         private void LevelScene()
         {
-            Debug.Log("Load to Level Scene!");
             SceneManager.LoadScene("Level");
         }
     }

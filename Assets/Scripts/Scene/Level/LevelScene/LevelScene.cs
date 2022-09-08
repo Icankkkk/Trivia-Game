@@ -23,8 +23,7 @@ namespace Trivia.Scene.Level.LevelScene
         }
 
         private void GoSelectPack()
-        {
-            Debug.Log("Load to Pack Scene!");
+        {     
             SceneManager.LoadScene("Pack");
         }
 
